@@ -1,0 +1,64 @@
+/* Print manual — page setup + print-only components (loaded alongside css/style.css) */
+@page{ size: A4; margin: 16mm 14mm 18mm; }
+
+body{ background:#fff; }
+.screen-only{ }
+@media print{
+  .screen-only{ display:none !important; }
+  body{ background:#fff; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a{ text-decoration:none; color:inherit; }
+  .pm-page{ page-break-after: always; }
+  .pm-avoid-break{ break-inside: avoid; page-break-inside: avoid; }
+}
+
+.pm-toolbar{
+  position:sticky; top:0; z-index:30; background:#fff; border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:space-between; padding:14px 24px; gap:16px; flex-wrap:wrap;
+}
+.pm-toolbar .lang-switch{ background:var(--paper3); }
+.pm-wrap{ max-width:850px; margin:0 auto; padding:0 20px 60px; }
+
+.pm-cover{
+  min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
+  padding:60px 50px; color:#fff; position:relative; overflow:hidden;
+  background:linear-gradient(160deg,#0B3E75, var(--jica-blue) 55%, var(--jica-blue-dark));
+}
+.pm-cover .pm-mark{ width:64px;height:64px;border-radius:18px;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:24px;margin-bottom:26px; }
+.pm-cover h1{ font-size:34px; font-weight:800; margin-bottom:14px; max-width:90%; line-height:1.35; }
+.pm-cover .pm-sub{ font-size:16px; opacity:.9; max-width:44ch; margin-bottom:30px; }
+.pm-cover .pm-meta{ font-size:12.5px; opacity:.75; position:absolute; bottom:40px; left:50px; }
+
+.pm-toc{ padding:60px 10px 20px; }
+.pm-toc h2{ font-size:22px; font-weight:800; margin-bottom:24px; color:var(--jica-blue-deep); }
+.pm-toc ol{ counter-reset:toc; display:flex; flex-direction:column; gap:14px; }
+.pm-toc li{ display:flex; align-items:baseline; gap:12px; font-size:15px; font-weight:700; }
+.pm-toc li .toc-num{ color:var(--jica-blue); font-weight:900; }
+.pm-toc li .toc-fill{ flex:1; border-bottom:1.5px dotted var(--line); }
+.pm-toc li .toc-desc{ font-weight:500; font-size:12.5px; color:var(--ink-soft); }
+
+.pm-section-title{ padding:50px 0 18px; }
+.pm-section-title .pm-num{ display:inline-flex; align-items:center; justify-content:center; width:44px;height:44px;border-radius:12px;color:#fff;font-weight:800;margin-bottom:12px; }
+.pm-section-title h1{ font-size:26px; font-weight:800; color:var(--ink); }
+.pm-section-title p{ color:var(--ink-soft); font-size:13.5px; margin-top:6px; }
+
+.pm-quiz-q{ margin-bottom:16px; padding:14px 16px; background:var(--paper2); border-radius:12px; }
+.pm-quiz-q .pmq-title{ font-weight:800; font-size:13.5px; margin-bottom:8px; }
+.pm-quiz-q .pmq-opts{ display:flex; flex-direction:column; gap:6px; margin-bottom:8px; }
+.pm-quiz-q .pmq-opt{ display:flex; gap:8px; font-size:12.5px; align-items:flex-start; }
+.pm-quiz-q .pmq-opt .box{ width:13px;height:13px;border:1.5px solid var(--ink-soft); border-radius:3px; flex:none; margin-top:2px; }
+.pm-answer-key{ margin-top:10px; background:var(--sky-tint); border-radius:12px; padding:14px 16px; font-size:12px; }
+.pm-answer-key summary{ font-weight:800; cursor:pointer; color:var(--jica-blue-deep); }
+.pm-answer-key .ak-item{ margin-top:8px; padding-top:8px; border-top:1px solid rgba(0,86,166,.15); }
+.pm-answer-key .ak-item b{ color:var(--jica-blue-deep); }
+
+.pm-check-group{ margin-bottom:16px; }
+.pm-check-group h3{ font-size:13.5px; font-weight:800; color:var(--coral2); margin-bottom:8px; }
+.pm-check-item{ display:flex; gap:10px; align-items:flex-start; font-size:12.5px; padding:6px 0; border-bottom:1px dashed var(--line); }
+.pm-check-item .box{ width:15px;height:15px;border:1.7px solid var(--ink); border-radius:4px; flex:none; margin-top:1px; }
+
+.pm-final-page{ background:linear-gradient(160deg,var(--coral2),#a8281d); color:#fff; min-height:920px; padding:50px 50px 40px; box-sizing:border-box; }
+.pm-final-page h2{ font-size:22px; font-weight:800; margin-bottom:10px; }
+.pm-final-page p{ opacity:.92; font-size:13px; max-width:60ch; }
+
+.pm-footer-note{ text-align:center; font-size:11px; color:var(--ink-soft); padding:24px 0; }

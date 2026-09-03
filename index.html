@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SNS運用マニュアル | JICA Kyrgyzstan Instagram Guide</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="bar container" style="padding-left:0;padding-right:0">
+    <button class="brand" aria-label="Home">
+      <div class="brand-mark">IG</div>
+      <div class="brand-text">
+        <span class="brand-title" id="brand-title">SNS運用マニュアル</span>
+        <span class="brand-sub" id="brand-sub">JICA Kyrgyzstan</span>
+      </div>
+    </button>
+    <div class="header-right">
+      <a class="nav-home-btn" href="#home" id="nav-home-link"><span id="nav-home-text">トップ</span></a>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="ja">日本語</button>
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="ru">Русский</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div id="footer-note">本マニュアルは職員向け社内資料です。</div>
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/blocks.js"></script>
+<script src="js/content-ja.js"></script>
+<script src="js/content-en.js"></script>
+<script src="js/content-ru.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/checklist.js"></script>
+<script src="js/app.js"></script>
+<script>
+  document.getElementById("nav-home-link").insertAdjacentHTML("afterbegin", window.ICONS.home.replace('<svg ','<svg class="icon" style="width:16px;height:16px" '));
+  // keep footer note in sync with language
+  (function(){
+    var origRender = null;
+    var footerObserver = setInterval(function(){
+      if(window.App){
+        clearInterval(footerObserver);
+        var update = function(){
+          document.getElementById("footer-note").textContent = window.App.getContent().ui.footerNote;
+        };
+        update();
+        window.addEventListener("hashchange", update);
+        document.querySelectorAll(".lang-btn").forEach(function(b){ b.addEventListener("click", function(){ setTimeout(update, 0); }); });
+      }
+    }, 50);
+  })();
+</script>
+</body>
+</html>
