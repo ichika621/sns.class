@@ -66,6 +66,22 @@ window.renderBlock = function renderBlock(b, UI){
           (b.steps? '<ol class="cs-steps">'+b.steps.map(function(s){ return '<li>'+mb(s)+'</li>'; }).join("")+'</ol>':'')+
         '</div>'+
       '</div>';
+    case "wideStep":
+      return '<div class="wide-step'+(b.src? '':' no-video')+'">'+
+        (b.src? '<div class="ws-video"><video controls playsinline preload="metadata"'+(b.poster? ' poster="'+esc(b.poster)+'"':'')+'>'+
+          (b.webm? '<source src="'+esc(b.webm)+'" type="video/webm">':'')+
+          '<source src="'+esc(b.src)+'" type="video/mp4"></video></div>':'')+
+        '<div class="ws-text">'+
+          '<div class="category-heading"><div class="cat-num">'+esc(b.num)+'</div><h3>'+esc(b.title)+'</h3></div>'+
+          '<div class="category-body">'+mb(b.body)+'</div>'+
+          (b.steps? '<ol class="cs-steps">'+b.steps.map(function(s){ return '<li>'+mb(s)+'</li>'; }).join("")+'</ol>':'')+
+        '</div>'+
+      '</div>';
+    case "downloadLink":
+      return '<div class="download-link-box">'+
+        '<a class="btn btn-primary" href="'+esc(b.href)+'" download>'+icon("download","icon")+' '+esc(b.label)+'</a>'+
+        (b.note? '<div class="download-link-note">'+mb(b.note)+'</div>':'')+
+      '</div>';
     case "ratioMockup":
       return '<div class="ratio-mockup"><div class="ratio-box '+(b.ratio==="9:16"?"r916":"r45")+'">'+esc(b.ratio)+'</div><div class="ratio-caption">'+esc(b.label)+'</div></div>';
     case "gridMockup":

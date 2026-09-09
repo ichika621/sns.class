@@ -297,6 +297,19 @@ ul{ padding:0; list-style:none; }
   .capcut-step .cs-video{ flex:none; width:100%; max-width:280px; margin:0 auto; }
 }
 
+.wide-step{ display:flex; flex-direction:column; gap:16px; margin:32px 0; padding:22px 24px; background:var(--sky-tint); border-radius:18px; }
+.wide-step .ws-video{ width:100%; max-width:640px; margin:0 auto; }
+.wide-step .ws-video video{ width:100%; display:block; border-radius:14px; background:#000; box-shadow:var(--shadow); }
+.wide-step .ws-text .category-heading{ margin:0 0 6px; }
+.wide-step .ws-text .category-body{ margin:6px 0 14px 48px; }
+.wide-step .ws-text .cs-steps{ margin:0 0 0 48px; padding-left:18px; }
+.wide-step .ws-text .cs-steps li{ font-size:13px; color:var(--ink-soft); margin-bottom:7px; line-height:1.7; }
+.wide-step.no-video .ws-text .category-body{ margin-left:48px; }
+
+.download-link-box{ margin:10px 0 20px; }
+.download-link-box a.btn{ display:inline-flex; }
+.download-link-note{ font-size:12px; color:var(--ink-soft); margin-top:8px; max-width:60ch; }
+
 .decision-box{ background:var(--sky-tint); border:1.5px dashed var(--jica-blue); border-radius:16px; padding:18px 20px; font-size:14px; color:var(--ink); margin:14px 0 18px; }
 .decision-box b{ color:var(--jica-blue-deep); }
 

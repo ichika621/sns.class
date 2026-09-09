@@ -287,6 +287,8 @@ window.CONTENT_JA = {
             { type: "ratioMockup", ratio: "9:16", label: "リールの基本比率" },
             { type: "videoEmbed", narrow: true, src: "videos/ending_example.mp4", webm: "videos/ending_example.webm", poster: "images/ending_example_poster.jpg",
               caption: "エンディングの例。JICAキルギス事務所のロゴと名称で締めくくる、シンプルな統一エンディング。" },
+            { type: "downloadLink", href: "videos/downloads/ending_example.zip", label: "エンディング動画をダウンロード（ZIP）",
+              note: "ZIP形式でダウンロードされます。解凍すると動画ファイルが使える（JICAのパソコンでは動画ファイルの直接ダウンロードがブロックされる場合があるため、ZIPにしている）。" },
             { type: "note", text: "投稿するときに**キャップカットのウォーターマークが入っていないことを確かめる。**" },
 
             { type: "heading", text: "11．動画の構成" },
@@ -697,9 +699,7 @@ window.CONTENT_JA = {
           body: "動画から音声だけを取り出し、別トラックとして単独で編集できるようにする方法。",
           steps: [
             "音声を抽出したいクリップをタップして選択する。",
-            "画面下部のツールバーで「Audio（音声）」をタップする。",
-            "表示されるメニューから「Extract（抽出）」をタップする。",
-            "元のクリップに「Audio extracted」の表示が出て、その下に新しい音声トラックが追加される。",
+            "画面下部のツールバーで「AudioExtract（抽出）」をタップする。",
             "抽出された音声クリップは、他のクリップと同様にタップして選択すれば、音量調整・トリム・フェード・音声エフェクトなどを個別に編集できる。"
           ],
           src: "videos/capcut/capcut_11_extract_audio.mp4", webm: "videos/capcut/capcut_11_extract_audio.webm", poster: "images/capcut/capcut_11_extract_audio.jpg" },
@@ -727,14 +727,33 @@ window.CONTENT_JA = {
       shortDesc: "Canvaを使ってInstagram用の画像・カルーセル等を制作する方法を学ぶ。",
       learn: [
         "共有されているCanvaプロジェクトにアクセスし、サムネイルを差し替えられるようになる",
-        "PC・PRスマホどちらでも同じ手順で作業できることがわかるようになる"
+        "PC・PRスマホどちらでも同じ手順で作業できることがわかるようになる",
+        "実際の画面録画を見ながら、写真のアップロードと、作った投稿のダウンロードを迷わず行えるようになる"
       ],
       blocks: [
         { type: "heading", text: "Canvaの使い方" },
         { type: "canvaLink", url: "https://canva.link/hmbmtl3komvntci", label: "共有Canvaプロジェクトを開く" },
         { type: "para", text: "ここにアクセスしてサムネイルをつける。パソコン・PRスマホ両方で作業可能。" },
-        { type: "para", text: "写真を変えるだけ。" },
-        { type: "para", text: "PRスマホで同じプロジェクトを開いて、右上のシェアのところからPNGをダウンロード。" }
+        { type: "wideStep", num: "1", title: "写真のアップロードと差し替え",
+          body: "自分のパソコンやスマホから写真をCanvaにアップロードし、テンプレート内の写真と差し替える方法。",
+          steps: [
+            "左側のツールバーで「Uploads（アップロード）」をタップする。",
+            "「Upload files（ファイルをアップロード）」をタップし、使いたい写真を選択する。",
+            "アップロードが完了すると、Uploadsパネルにサムネイルが表示される。",
+            "差し替えたい写真の上に、アップロードしたサムネイルをドラッグ＆ドロップする（自動で元の写真と入れ替わる）。",
+            "必要に応じて、写真の四隅のハンドルをドラッグしてサイズや位置を調整する。"
+          ],
+          src: "videos/canva/canva_01_upload.mp4", webm: "videos/canva/canva_01_upload.webm", poster: "images/canva/canva_01_upload.jpg" },
+        { type: "wideStep", num: "2", title: "作った投稿のダウンロード",
+          body: "完成したデザインをファイルとして書き出し、パソコンに保存する方法。",
+          steps: [
+            "右上の「Share（共有）」をタップする。",
+            "表示されるパネルで「Download（ダウンロード）」をタップする。",
+            "「File type」で書き出す形式（画像として使う場合はJPGまたはPNG）を選ぶ。",
+            "カルーセルなど複数ページある場合は「Select pages」で「All（すべて）」または「This page（このページのみ）」を選ぶ。",
+            "「Download」をタップして保存する。"
+          ],
+          src: "videos/canva/canva_02_download.mp4", webm: "videos/canva/canva_02_download.webm", poster: "images/canva/canva_02_download.jpg" }
       ],
       practice: [
         "上のリンクからCanvaプロジェクトを開く（PCまたはPRスマホ）",

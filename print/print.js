@@ -42,6 +42,20 @@
         '</div>'+
       '</div>';
     }
+    if(b.type === "wideStep"){
+      return '<div class="wide-step pm-avoid-break'+(b.poster? '':' no-video')+'">'+
+        (b.poster? '<div class="ws-video"><img src="'+esc(b.poster)+'" alt=""><div class="cs-video-note">▶ '+esc(VIDEO_NOTE[lang]||VIDEO_NOTE.ja)+'</div></div>':'')+
+        '<div class="ws-text">'+
+          '<div class="category-heading"><div class="cat-num">'+esc(b.num)+'</div><h3>'+esc(b.title)+'</h3></div>'+
+          '<div class="category-body">'+window.mdBold(b.body)+'</div>'+
+          (b.steps? '<ol class="cs-steps">'+b.steps.map(function(s){ return '<li>'+window.mdBold(s)+'</li>'; }).join("")+'</ol>':'')+
+        '</div>'+
+      '</div>';
+    }
+    if(b.type === "downloadLink"){
+      /* A download link only makes sense in the interactive web version. */
+      return "";
+    }
     return window.renderBlock(b, UI);
   }
 

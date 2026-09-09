@@ -287,6 +287,8 @@ window.CONTENT_EN = {
             { type: "ratioMockup", ratio: "9:16", label: "Standard ratio for Reels" },
             { type: "videoEmbed", narrow: true, src: "videos/ending_example.mp4", webm: "videos/ending_example.webm", poster: "images/ending_example_poster.jpg",
               caption: "An example ending: a simple, consistent close with the JICA Kyrgyz Republic Office logo and name." },
+            { type: "downloadLink", href: "videos/downloads/ending_example.zip", label: "Download the ending video (ZIP)",
+              note: "This downloads as a ZIP file — unzip it to get the video file. (It's zipped because JICA computers can block direct downloads of video files.)" },
             { type: "note", text: "Before posting, **make sure there is no CapCut watermark on the video.**" },
 
             { type: "heading", text: "11. Video structure" },
@@ -697,9 +699,7 @@ window.CONTENT_EN = {
           body: "How to pull just the audio out of a clip so you can edit it as its own, separate track.",
           steps: [
             "Tap the clip you want to extract audio from to select it.",
-            "Tap \"Audio\" in the bottom toolbar.",
-            "In the menu that appears, tap \"Extract.\"",
-            "The original clip now shows an \"Audio extracted\" label, and a new audio track appears underneath it.",
+            "Tap \"AudioExtract\" in the bottom toolbar.",
             "The extracted audio clip can be tapped and edited on its own, just like any other clip — volume, trimming, fades, and audio effects all apply to it independently."
           ],
           src: "videos/capcut/capcut_11_extract_audio.mp4", webm: "videos/capcut/capcut_11_extract_audio.webm", poster: "images/capcut/capcut_11_extract_audio.jpg" },
@@ -727,14 +727,33 @@ window.CONTENT_EN = {
       shortDesc: "Learn how to use Canva to create Instagram images and carousels.",
       learn: [
         "Open the shared Canva project and swap in a new thumbnail image",
-        "Understand that you can work from either a PC or the PR phone using the same steps"
+        "Understand that you can work from either a PC or the PR phone using the same steps",
+        "Confidently upload photos and download a finished design while following the screen recordings"
       ],
       blocks: [
         { type: "heading", text: "How to use Canva" },
         { type: "canvaLink", url: "https://canva.link/hmbmtl3komvntci", label: "Open the shared Canva project" },
         { type: "para", text: "Access the link above to create a thumbnail. You can work from either a PC or the PR phone." },
-        { type: "para", text: "Just swap out the photo." },
-        { type: "para", text: "Open the same project on the PR phone, then download the PNG from the \"Share\" button in the top right." }
+        { type: "wideStep", num: "1", title: "Uploading and swapping in a photo",
+          body: "How to upload a photo from your computer or phone into Canva, and swap it into a template.",
+          steps: [
+            "Tap \"Uploads\" in the left-hand toolbar.",
+            "Tap \"Upload files\" and choose the photo you want to use.",
+            "Once it's uploaded, the thumbnail appears in the Uploads panel.",
+            "Drag that thumbnail onto the photo you want to replace (it swaps in automatically).",
+            "If needed, drag the corner handles to adjust the photo's size and position."
+          ],
+          src: "videos/canva/canva_01_upload.mp4", webm: "videos/canva/canva_01_upload.webm", poster: "images/canva/canva_01_upload.jpg" },
+        { type: "wideStep", num: "2", title: "Downloading the finished design",
+          body: "How to export your finished design as a file and save it to your computer.",
+          steps: [
+            "Tap \"Share\" in the top right.",
+            "In the panel that appears, tap \"Download.\"",
+            "Under \"File type,\" choose the format to export (JPG or PNG if you'll use it as an image).",
+            "For a multi-page design like a carousel, use \"Select pages\" to choose \"All\" or \"This page.\"",
+            "Tap \"Download\" to save it."
+          ],
+          src: "videos/canva/canva_02_download.mp4", webm: "videos/canva/canva_02_download.webm", poster: "images/canva/canva_02_download.jpg" }
       ],
       practice: [
         "Open the Canva project from the link above (PC or PR phone)",
