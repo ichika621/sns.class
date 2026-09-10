@@ -83,9 +83,9 @@ window.renderBlock = function renderBlock(b, UI){
         (b.note? '<div class="download-link-note">'+mb(b.note)+'</div>':'')+
       '</div>';
     case "ratioMockup":
-      return '<div class="ratio-mockup"><div class="ratio-box '+(b.ratio==="9:16"?"r916":"r45")+'">'+esc(b.ratio)+'</div><div class="ratio-caption">'+esc(b.label)+'</div></div>';
+      return '<div class="ratio-mockup"><div class="ratio-box '+(b.ratio==="9:16"?"r916":(b.ratio==="16:9"?"r169":"r45"))+'">'+esc(b.ratio)+'</div><div class="ratio-caption">'+esc(b.label)+'</div></div>';
     case "gridMockup":
-      return '<div class="grid-mockup"><div class="gm-frame"><div class="gm-line gm-v1"></div><div class="gm-line gm-v2"></div><div class="gm-line gm-h1"></div><div class="gm-line gm-h2"></div><div class="gm-face"></div><div class="gm-note">grid overlay</div></div></div>';
+      return '<div class="grid-mockup"><div class="gm-frame'+(b.wide?" wide":"")+(b.center?" center":"")+'"><div class="gm-line gm-v1"></div><div class="gm-line gm-v2"></div><div class="gm-line gm-h1"></div><div class="gm-line gm-h2"></div><div class="gm-face"></div><div class="gm-note">'+esc(b.note||"grid overlay")+'</div></div></div>';
     case "statBox":
       return '<div class="stat-box'+(b.emphasis?" emphasis":"")+(b.muted?" muted":"")+'"><div class="stat-num">'+esc(b.stat)+'</div><div class="stat-label">'+esc(b.label)+'</div></div>';
     case "videoEmbed":

@@ -20,8 +20,8 @@
   /* ---------------- Home page ---------------- */
   function renderHome(){
     var C = getContent(), UI = C.ui;
-    var s1=C.sections[0], s2=C.sections[1], s3=C.sections[2], s4=C.sections[3], s5=C.sections[4];
-    var tones = { coral:"tone-coral", sky:"tone-sky", violet:"tone-violet", amber:"tone-amber", coral2:"tone-coral2" };
+    var s1=C.sections[0], s2=C.sections[1], s3=C.sections[2], s4=C.sections[3], s5=C.sections[4], s6=C.sections[5];
+    var tones = { coral:"tone-coral", sky:"tone-sky", violet:"tone-violet", amber:"tone-amber", coral2:"tone-coral2", green:"tone-green" };
 
     function normalCard(s){
       return '<a class="sec-card '+tones[s.color]+(s.isPlaceholder?" placeholder":"")+'" href="#'+s.id+'">'+
@@ -35,7 +35,7 @@
       return '<a class="sec-card featured tone-coral2" href="#'+s.id+'">'+
         '<div class="icon-wrap">'+icon(s.icon)+'</div>'+
         '<div style="flex:1"><span class="featured-badge">'+icon("star")+' '+esc(UI.badgeMostImportant)+'</span>'+
-        '<h3>'+esc(s.number)+' &middot; '+esc(s.title)+'</h3><p>'+esc(s.shortDesc)+'</p></div>'+
+        '<h3>'+esc(s.title)+'</h3><p>'+esc(s.shortDesc)+'</p></div>'+
         '<span class="btn btn-coral cta">'+esc(UI.startBtn)+' '+icon("arrowRight")+'</span></a>';
     }
 
@@ -58,7 +58,7 @@
       '<div class="section-title-row"><div><div class="eyebrow">Instagram Guide</div><h2>'+esc(UI.siteTitle)+'</h2></div></div>'+
       '<div class="card-grid">'+
         featuredCard(s5)+
-        normalCard(s1)+ normalCard(s2)+ normalCard(s3)+ normalCard(s4)+
+        normalCard(s1)+ normalCard(s2)+ normalCard(s3)+ normalCard(s4)+ normalCard(s6)+
       '</div>'+
     '</div></section>';
   }
@@ -173,12 +173,12 @@
     var toneBg = {
       coral:"linear-gradient(160deg,#FF6B57,#c8392c)", sky:"linear-gradient(160deg,#3AA6E0,#0056A6)",
       violet:"linear-gradient(160deg,#8B6FE0,#5c40b8)", amber:"linear-gradient(160deg,#F4A93B,#b8781a)",
-      coral2:"linear-gradient(160deg,#E8483A,#a8281d)"
+      coral2:"linear-gradient(160deg,#E8483A,#a8281d)", green:"linear-gradient(160deg,#39B378,#1f7a4d)"
     };
     return '<section class="sec-hero" style="background:'+toneBg[s.color]+'">'+
       '<div class="container">'+
         '<a class="back" href="#home"><span style="display:inline-flex;transform:rotate(180deg)">'+icon("arrowRight","icon")+'</span> '+esc(UI.backHome)+'</a>'+
-        '<div class="num-badge">'+esc(s.number)+'</div>'+
+        (s.mostImportant? '': '<div class="num-badge">'+esc(s.number)+'</div>')+
         '<h1>'+esc(s.title)+'</h1><p>'+esc(s.shortDesc)+'</p>'+
       '</div>'+
     '</section>';

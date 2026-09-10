@@ -851,6 +851,182 @@ window.CONTENT_EN = {
           ]
         }
       ]
+    },
+
+    /* ================= SECTION 6 (Website articles) ================= */
+    {
+      id: "s6",
+      number: "05",
+      icon: "article",
+      color: "green",
+      title: "How to Write Website Articles",
+      shortDesc: "Learn how to write articles for the JICA Kyrgyz Republic Office's official website, and how to take photos for them.",
+      learn: [
+        "Explain how an official website article differs from an Instagram post in purpose and audience",
+        "Apply the basic rules for titles, lead paragraphs, and paragraph breaks, using concrete examples",
+        "Understand how to photograph an article — orientation, framing, number of shots, and how to reduce camera shake"
+      ],
+      blocks: [
+        { type: "heading", text: "1. How website articles differ from Instagram" },
+        { type: "subheading", text: "1-1. Different purpose, different audience" },
+        { type: "para", text: "Instagram is a medium where someone scrolling casually happens to come across a post. The official website, by contrast, is a medium **people actively visit because they already want to find out something about the JICA Kyrgyz Republic Office.**" },
+        { type: "cards3", items: [
+          { label: "Who reads it", title: "Government ministries, press, researchers, prospective applicants, and more", icon: "users" },
+          { label: "Why they read it", title: "To find accurate information they can treat as a factual record", icon: "message" },
+          { label: "What to write", title: "What happened, when, and how — accurately and concisely", icon: "flag" }
+        ]},
+        { type: "decisionBox", text: "Instagram's goal is to \"catch the attention of someone who happens to see it.\" A website article's goal is **\"to deliver accurate, easy-to-understand information to someone who is already looking for it.\"** So there's no need for a hook question or attention-grabbing language — instead, prioritize stating the facts concisely and accurately." },
+
+        { type: "heading", text: "2. Before you start writing" },
+        { type: "list", items: [
+          "**Keep sentences short and concise.** Don't cram too much information into one sentence.",
+          "Before you start writing, sketch out the overall structure (intro → body → conclusion).",
+          "Before you go out to interview or cover the story, prepare a planned draft (an outline) based on what you already know, and make clear what still needs to be confirmed on the day — it makes the actual interviewing and writing much smoother.",
+          "It's fine to reference past articles, but **never copy their wording or figures as-is.** Always update dates, titles, and numbers to the current, correct information."
+        ]},
+        { type: "example",
+          bad: "The JICA Kyrgyz Republic Office has, in cooperation with the Government of the Kyrgyz Republic and relevant ministries, continuously implemented multiple projects related to human resource development and technical cooperation in the agricultural sector, thereby making a significant contribution to improving local productivity.",
+          badWhy: "Too much information is packed into one sentence, making it hard to tell which point matters most.",
+          good: "The JICA Kyrgyz Republic Office has worked with the Kyrgyz government to develop human resources in the agricultural sector. As a result, local productivity has improved.",
+          goodWhy: "Breaking it into short sentences organizes the information and makes it easier to read." },
+
+        { type: "heading", text: "3. Going out to interview or cover a story" },
+        { type: "list", items: [
+          "Arrange the schedule as early as possible, and put the other person's availability first.",
+          "Confirm whether you may record the conversation before the interview begins.",
+          "Stick to the agreed time.",
+          "Prepare your questions ahead of time — think through what you want to ask and how it will be used in the article before you go."
+        ]},
+
+        { type: "heading", text: "4. Titles and headlines" },
+        { type: "para", text: "A title doesn't need to be a \"you'll want to keep reading\" hook question the way an Instagram post does. **Prioritize making it clear who did what, just from reading the title.**" },
+        { type: "example", bad: "Training held in Kyrgyzstan", badWhy: "It's unclear who held the training or what it was for — the reader can't picture the article's content.",
+          good: "JICA and Kyrgyz Ministry of Agriculture hold joint dairy technology training", goodWhy: "The parties involved (JICA, the ministry) and the content (dairy technology training) are clear at a glance." },
+        { type: "example", bad: "A new project has begun", badWhy: "\"New\" and \"project\" alone give no sense of where or what specifically has started.",
+          good: "New irrigation project launches in five villages of Issyk-Kul region", goodWhy: "The location (Issyk-Kul region), scale (five villages), and content (irrigation) are all concrete." },
+        { type: "example", bad: "The JICA Kyrgyz Republic Office held an exchange of views last week in Bishkek together with relevant ministries on human resource development in the education sector, and discussed the future direction of cooperation", badWhy: "Too much information is crammed into one long sentence, making it hard to read as a title (aim for roughly 30–40 characters in Japanese, or a similarly tight length in English).",
+          good: "JICA and Kyrgyz Ministry of Education and Science discuss strengthening human resource cooperation", goodWhy: "Narrowing it down to the key point makes for a short title that's clear at a glance." },
+        { type: "example", bad: "You won't believe how much Kyrgyzstan's education is changing!?", badWhy: "Exclamation points and attention-grabbing phrasing belong on Instagram, not in an official article's title.",
+          good: "Kyrgyz Ministry of Education and Science and JICA launch teacher training program", goodWhy: "State the facts plainly, but clearly." },
+
+        { type: "heading", text: "5. Lead paragraphs" },
+        { type: "para", text: "In the lead (the article's opening one or two sentences), **state concisely, up front, who did what, when, and where.** Save the detailed background for the body of the article." },
+        { type: "example",
+          bad: "The other day, something rather memorable happened. It may turn out to be a turning point for Kyrgyzstan's agricultural sector.",
+          badWhy: "It takes too long to get to the main point (who, when, what), so the reader can't quickly find the information they came for.",
+          good: "The JICA Kyrgyz Republic Office held a meeting with the Kyrgyz Ministry of Water Resources, Agriculture and Processing Industry in Bishkek on August 20 to discuss agricultural technical cooperation.",
+          goodWhy: "\"Who (JICA), when (August 20), where (Bishkek), what (held a meeting)\" is all clear from the very first sentence." },
+        { type: "example",
+          bad: "Ahead of Kyrgyzstan's Independence Day, the JICA Kyrgyz Republic Office, as part of agricultural cooperation that has continued since 2015, held a meeting in Bishkek on August 20 with officials from the Kyrgyz Ministry of Water Resources, Agriculture and Processing Industry — also attended by local media — to discuss a five-year technical cooperation plan.",
+          badWhy: "Cramming everything into one sentence actually makes the key point harder to find.",
+          good: "The JICA Kyrgyz Republic Office held a meeting with the Kyrgyz Ministry of Water Resources, Agriculture and Processing Industry in Bishkek on August 20, and discussed five years of future agricultural technical cooperation.",
+          goodWhy: "The lead sticks to the key point; background details (Independence Day, the history since 2015) move to the body." },
+
+        { type: "heading", text: "6. Line breaks and paragraphing" },
+        { type: "list", items: [
+          "**Start a new paragraph whenever the topic changes.** Don't pack more than one topic into a single paragraph.",
+          "For a Japanese-language article, aim for **roughly 3–5 sentences per paragraph** (adjust proportionally for English). Split it up if it runs longer.",
+          "From the **second paragraph onward**, include a quote from the person you interviewed — it makes the article far more convincing."
+        ]},
+        { type: "subheading", text: "Example paragraph structure" },
+        { type: "structureFlow", steps: [
+          { title: "Paragraph 1: Lead", body: "Concisely summarize who, when, where, and what." },
+          { title: "Paragraph 2 onward: A voice from the field, and background", body: "Quote something the interviewee said, and explain the background and specifics of the work." },
+          { title: "Final paragraph: Looking ahead", body: "Convey future plans and what this work means going forward." }
+        ]},
+        { type: "quoteList", items: [
+          "\"Thanks to this training, I gained new knowledge about dairy quality control,\" said an official from the Ministry of Agriculture.",
+          "\"Learning Japanese techniques will be a huge help in my future work,\" said one of the Kyrgyz participants."
+        ]},
+
+        { type: "heading", text: "7. Once you've finished writing" },
+        { type: "list", items: [
+          "**Read it out loud** and check for typos, missing words, or awkward phrasing.",
+          "Avoid technical jargon and abbreviations wherever possible. If you must use one, always add a brief explanation.",
+          "**If you're not sure who the audience is, write so that a middle- or high-school student could understand it.**"
+        ]},
+
+        { type: "heading", text: "【Photography】" },
+        { type: "para", text: "Photos for articles are shot differently than an Instagram Reel (vertical video). Keep the following points in mind." },
+
+        { type: "categoryHeading", num: "①", title: "Shoot horizontally (landscape)", body: "An Instagram Reel is vertical (9:16) by default, but **photos for a website article should be landscape (e.g. 16:9) by default.** A vertical shot won't fit the article layout and leaves awkward blank space above, below, or to the sides. Shooting landscape also **makes the footage easier to hand off to other media outlets, such as TV (it's more compatible with their formats).**" },
+        { type: "ratioMockup", ratio: "16:9", label: "Basic aspect ratio for article photos (landscape)" },
+
+        { type: "categoryHeading", num: "②", title: "Don't zoom — physically move closer", body: "Using a phone's zoom degrades image quality. **To preserve quality, don't use zoom — physically move closer to the subject instead.**" },
+        { type: "goodng", ngLabel: "Zooming in from a distance with the phone", goodLabel: "Skip zoom — physically move closer to the subject", note: "Zoom degrades image quality, so close the physical distance whenever you can." },
+
+        { type: "categoryHeading", num: "③", title: "Use the grid lines to keep the subject centered", body: "Turn on your phone's grid lines, and make sure **the subject stays centered in frame and that no part of anyone's body gets cut off** at the edge." },
+        { type: "gridMockup", wide: true, center: true, note: "Centered with the grid, nothing cropped" },
+
+        { type: "categoryHeading", num: "④", title: "Take extra shots of group photos (burst mode)", body: "For group photos, **always take several shots — burst mode if possible.** A single shot often turns out unusable because someone blinked." },
+
+        { type: "categoryHeading", num: "⑤", title: "Also take some photos with movement", body: "A stiff, standing-in-a-row commemorative shot with everyone looking at the camera is perfectly fine for that purpose. On top of that, **also take some separate photos that capture a moment of movement — someone working, pointing, talking, or laughing** — they make it much easier to convey the actual scene when they run in the article." },
+        { type: "list", items: [
+          "Commemorative photo: a stiff, standing-in-a-row shot looking at the camera works fine.",
+          "One more for the article: also capture a moment of activity, gesture, or expression."
+        ]},
+
+        { type: "categoryHeading", num: "⑥", title: "Tuck in your elbows to reduce shake", body: "**Tuck both elbows firmly in against your body** while shooting — it significantly reduces camera shake." },
+
+        { type: "categoryHeading", num: "⑦", title: "Tips for shooting a panorama", body: "When shooting in panorama mode, how you move your body can minimize blur in your torso." },
+        { type: "structureFlow", compact: true, steps: [
+          { title: "① Fix your lower body", body: "Point your hips and legs toward the middle of the whole panning range, and keep them still throughout the shot." },
+          { title: "② Twist your upper body", body: "Twist only your upper body around to your starting position before you begin." },
+          { title: "③ Shoot as you untwist", body: "Once you start the shutter, keep your lower body fixed and slowly untwist your upper body as you shoot." }
+        ]},
+        { type: "note", text: "Keeping your lower body fixed and moving only your upper body keeps your center of gravity steady, which makes the seams in a panorama photo blend much more smoothly." }
+      ],
+      quiz: [
+        {
+          type: "mcq",
+          q: "Which of these correctly describes the difference between a website article and an Instagram post?",
+          options: [
+            "A website article should also prioritize hook questions and attention-grabbing language, just like Instagram",
+            "A website article should prioritize delivering accurate, easy-to-understand information to a reader who is already looking for it",
+            "There's no such thing as an \"audience\" to think about for a website article",
+            "A website article should be kept as short as possible and skip detailed explanations"
+          ],
+          answer: 1,
+          explain: "Instagram's goal is to catch the attention of someone who happens to see it. A website article's goal is to deliver accurate, easy-to-understand information to someone already looking for it."
+        },
+        {
+          type: "goodng",
+          q: "Which is the better article title?",
+          optionA: { label: "A new project has begun", verdict: "ng" },
+          optionB: { label: "New irrigation project launches in five villages of Issyk-Kul region", verdict: "good" },
+          explain: "A title with a concrete location, scale, and subject lets the reader picture the article's content just by reading it."
+        },
+        {
+          type: "mcq",
+          q: "What should a lead paragraph (the article's opening one or two sentences) prioritize?",
+          options: [
+            "Opening with a memorable anecdote and saving the main point for later",
+            "Cramming as much background and history as possible into the very start",
+            "Concisely stating who did what, when, and where, right away",
+            "Grabbing the reader's interest with a question"
+          ],
+          answer: 2,
+          explain: "The lead should state the key point concisely up front; detailed background belongs in the body of the article."
+        },
+        {
+          type: "truefalse",
+          q: "A good rule of thumb is roughly 3–5 sentences per paragraph, and including a quote from someone you interviewed from the second paragraph onward.",
+          answer: true,
+          explain: "Correct. Start a new paragraph whenever the topic changes, and quoting the people you interviewed makes the article more convincing."
+        },
+        {
+          type: "mcq",
+          q: "Which of these correctly describes how to photograph an article?",
+          options: [
+            "Shoot vertically (9:16), just like an Instagram Reel",
+            "Shoot landscape by default, skip zoom, and physically move closer to the subject",
+            "Use the zoom feature freely from a distance to preserve image quality",
+            "One carefully composed shot is enough for a group photo"
+          ],
+          answer: 1,
+          explain: "Article photos should be landscape by default. Skip zoom, since it degrades image quality — move closer instead. For group photos, take several shots, since someone may have blinked."
+        }
+      ]
     }
   ]
 };

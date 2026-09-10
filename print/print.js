@@ -10,15 +10,15 @@
   var PRINT_UI = {
     ja: { coverTitle:"SNS運用マニュアル", coverSub:"JICA Kyrgyzstan Instagram運用ガイド ― 印刷用マニュアル", coverMeta:"社内資料 ／ Web版と同一内容",
       tocTitle:"目次", answerKey:"クイズの解答を見る（タップして開く）", answerLabel:"解説", practiceHeading:"実践ステップ", learnHeading:"このセクションで学ぶこと",
-      finalTitle:"投稿する前に、もう一度。", finalBody:"チェックリスト（05）を上から順番に確認し、すべて完了したらアイスルーさん、スベトラーナさんに確認してください。",
+      finalTitle:"投稿する前に、もう一度。", finalBody:"投稿前確認チェックリストを上から順番に確認し、すべて完了したらアイスルーさん、スベトラーナさんに確認してください。",
       printBtn:"印刷 / PDFとして保存", langLabel:"言語", footNote:"本マニュアルは職員向け社内資料です。内容はWeb版と同一です。", coverPageLabel:"ページ" },
     en: { coverTitle:"Instagram SNS Manual", coverSub:"JICA Kyrgyzstan Instagram Operations Guide — Print Edition", coverMeta:"Internal reference / same content as the web version",
       tocTitle:"Contents", answerKey:"Show quiz answers (click to open)", answerLabel:"Explanation", practiceHeading:"Practice steps", learnHeading:"What you'll learn in this section",
-      finalTitle:"One more look before you post.", finalBody:"Go through the Checklist (05) from top to bottom, then confirm with Aisuluu and Svetlana once everything is checked.",
+      finalTitle:"One more look before you post.", finalBody:"Go through the Pre-Post Checklist from top to bottom, then confirm with Aisuluu and Svetlana once everything is checked.",
       printBtn:"Print / Save as PDF", langLabel:"Language", footNote:"This is an internal manual for staff use. Content matches the web version.", coverPageLabel:"Page" },
     ru: { coverTitle:"Руководство по Instagram", coverSub:"Инструкция по ведению Instagram JICA Кыргызстан — версия для печати", coverMeta:"Внутренний материал / содержание совпадает с веб-версией",
       tocTitle:"Содержание", answerKey:"Показать ответы теста (нажмите, чтобы открыть)", answerLabel:"Пояснение", practiceHeading:"Шаги на практике", learnHeading:"Чему вы научитесь в этом разделе",
-      finalTitle:"Ещё раз проверьте перед публикацией.", finalBody:"Пройдите чек-лист (05) сверху вниз и, когда всё отмечено, согласуйте с Айсулуу и Светланой.",
+      finalTitle:"Ещё раз проверьте перед публикацией.", finalBody:"Пройдите чек-лист перед публикацией сверху вниз и, когда всё отмечено, согласуйте с Айсулуу и Светланой.",
       printBtn:"Печать / Сохранить как PDF", langLabel:"Язык", footNote:"Это внутренний материал для сотрудников. Содержание совпадает с веб-версией.", coverPageLabel:"Стр." }
   };
 
@@ -59,7 +59,7 @@
     return window.renderBlock(b, UI);
   }
 
-  var toneBg = { coral:"var(--coral2)", sky:"var(--jica-blue)", violet:"var(--violet)", amber:"var(--amber)", coral2:"var(--coral2)" };
+  var toneBg = { coral:"var(--coral2)", sky:"var(--jica-blue)", violet:"var(--violet)", amber:"var(--amber)", coral2:"var(--coral2)", green:"var(--green)" };
 
   function qs(name){ var m = new RegExp("[?&]"+name+"=([^&]+)").exec(location.search); return m? decodeURIComponent(m[1]) : null; }
 
@@ -86,7 +86,7 @@
 
   function renderSection(s, PUI, UI, lang){
     var html = '<div class="pm-page">';
-    html += '<div class="pm-section-title pm-avoid-break"><div class="pm-num" style="background:'+toneBg[s.color]+'">'+esc(s.number)+'</div><h1>'+esc(s.title)+'</h1><p>'+esc(s.shortDesc)+'</p></div>';
+    html += '<div class="pm-section-title pm-avoid-break">'+(s.mostImportant? '':'<div class="pm-num" style="background:'+toneBg[s.color]+'">'+esc(s.number)+'</div>')+'<h1>'+esc(s.title)+'</h1><p>'+esc(s.shortDesc)+'</p></div>';
 
     if(s.groups){
       html += '<p class="block-para" style="font-weight:700">'+esc(s.intro)+'</p>';
@@ -153,7 +153,7 @@
 
     html += '<div class="pm-toc pm-page"><h2>'+esc(PUI.tocTitle)+'</h2><ol>';
     C.sections.forEach(function(s){
-      html += '<li><span class="toc-num">'+esc(s.number)+'</span><span>'+esc(s.title)+'</span><span class="toc-fill"></span><span class="toc-desc">'+esc(s.shortDesc)+'</span></li>';
+      html += '<li>'+(s.mostImportant? '':'<span class="toc-num">'+esc(s.number)+'</span>')+'<span>'+esc(s.title)+'</span><span class="toc-fill"></span><span class="toc-desc">'+esc(s.shortDesc)+'</span></li>';
     });
     html += '</ol></div>';
 
