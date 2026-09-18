@@ -808,7 +808,6 @@ window.CONTENT_EN = {
           items: [
             "Is the message of this post narrowed down to just one thing?",
             "Can someone who doesn't know JICA's work understand it?",
-            "Does it answer \"so what?\"",
             "Is it more than just a plain activity report?",
             "Does it show something only JICA can show?"
           ]
@@ -824,7 +823,7 @@ window.CONTENT_EN = {
             "Is there no moment you could trim, even by 0.5 seconds?",
             "Are there subtitles?",
             "Are the subtitles within 2 lines?",
-            "Do the subtitles avoid overlapping Instagram's UI?",
+            "Do the subtitles avoid overlapping Instagram's on-screen buttons and icons (the UI)?",
             "Can the thumbnail alone communicate what it's about?",
             "Does the visual change every couple of seconds?",
             "**Make sure there is no CapCut watermark on the video**"
@@ -833,10 +832,10 @@ window.CONTENT_EN = {
         {
           title: "Caption",
           items: [
-            "Is there a Hook in the first line?",
+            "Is there an opening line that grabs the reader's interest (a Hook)?",
             "Is it not too long?",
             "Does it add the necessary supporting information?",
-            "Is there a CTA?",
+            "Is there a line prompting the viewer to take an action (a CTA), such as follow, save, or learn more?",
             "Are the hashtags appropriate?",
             "Are the Kyrgyz/Russian, etc. language settings correct?"
           ]
